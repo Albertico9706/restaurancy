@@ -14,7 +14,7 @@ export default function SearchBox() {
     const query = event.currentTarget.query.value;
 
     // Redireccionamos al index con una query
-    router.push(`/portfolio/restaurancy/?q=${query}`);
+    router.push(`/?q=${query}`);
   }
 
   return (

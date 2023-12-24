@@ -50,7 +50,7 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
     async function searchAction(formData: FormData) {
     'use server'
     console.log("searchAction")
-    redirect(`/portfolio/restaurancy/?q=${formData.get('query')}`);
+    redirect(`/?q=${formData.get('query')}`);
     }
 
     return (

@@ -1,3 +1,5 @@
+import { error } from "console";
+
 interface Restaurant {
   id: string;
   name: string;
@@ -190,22 +192,28 @@ const api = {
     if (!restaurant) {
       throw new Error(`Restaurant with id ${id} not found`);
     }
-
+    
     return restaurant;
   },
 
   search: async (query: string): Promise<Restaurant[]> => {
     // Obtenemos los restaurantes
-    const results = await api.list().then((restaurants) =>
+    const restlist=await api.list()
+    const results = await api.list().then((restaurants) =>{
       // Los filtramos por nombre
-      restaurants.filter((restaurant) =>
-        restaurant.name.toLowerCase().includes(query.toLowerCase()),
-      ),
-    );
+      return restaurants.filter((restaurant) =>restaurant.name.toLowerCase().includes(query.toLowerCase())
+      )}).catch((error)=>{
+        console.log(error)
+        const results = restlist
+
+        console.log(restlist)
+        return restlist
+      })
+    
 
     // Los retornamos
     return results;
-  },
-};
+  },}
+
 
 export default api;
