@@ -33,12 +33,10 @@ necesario.
 También nos dijo que te sientas libre de agregar las funcionalidades que consideres útiles para la aplicación y que 
 seas todo lo creativo que quieras con el diseño. */
 import { Metadata } from "next"
-
+//Add the server action to the SearchBox component and separate this on other archive
 import SearchBox from "@/components/SearchBox"
 import api from "@/api"
-import Image from "next/image"
-import Link from "next/link"
-import { Suspense } from "react"
+
 import { redirect } from "next/navigation"
 import RestaurantCard from "@/components/RestaurantCard"
 
@@ -58,14 +56,15 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
             <h1 className="text-orange-500 text-5xl m-3 ">Curso de Nexts Js de Goncy</h1>
             <p>Creando un catalogo de restaurantes para conocer los fundamentos de Next Js</p>
             {/* <SearchBox/> */}
+            
             <form action={searchAction} className="inline-flex gap-2 mb-4">
                 <input defaultValue={searchParams.q || ''} className="px-2 bg-slate-600 " name="query" />
                 <button type="submit" className="p-2 bg-white/20">Search</button>
             </form>
             <section className="grid justify-center gap-4">
                 
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-8">
-                {restaurants.map((rest)=>{ return <div key={rest.id} className="w-80 border border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all"><RestaurantCard rest={rest} key={rest.id}/></div> })}
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10">
+                {restaurants.map((rest)=>{ return <div key={rest.id} className=" border border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all"><RestaurantCard rest={rest} key={rest.id}/></div> })}
                 </div>
             </section>
     
@@ -75,6 +74,6 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
 export const metadata:Metadata={
     title:"Restaurancy -Nextjs",
     description:"Curso de sobre ls fundamentos de Nextjs de Gonzalo Pozo",
-    keywords:["restaurant","food","gonci","nextjs"],
+    keywords:["restaurant","food","goncy","nextjs"],
 
 }

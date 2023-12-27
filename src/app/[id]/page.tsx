@@ -8,28 +8,12 @@ import { title } from "process"
     return ids
 } */
 
-//Arreglar el componente RestaurantCard
+
 
 export default async function RestId({params:{id}}:{params:{id:string}}){
     const rest=await api.fetch(id)
   
-    return(
-        <>
-        <RestaurantCard rest={rest}/>
-        {/* <section className="w-full flex flex-col  h-screen place-items-center" >
-            
-            <h1 className="text-5xl m-8">{rest.name}</h1>
-            <div className="w-[480px] h-[300px] opacity-75 bg-gradient-to-br from-slate-700 to-slate-500  m-2  " ><img src={rest.image} alt="" className="w-full"/></div>
-            <p>{rest.description}</p>
-            <div className="flex place-items-start gap-5 ">
-                <small>{rest.address}</small><span>⭐{rest.score}</span><span>{rest.ratings}</span>
-            </div>
-        </section> */} 
-         </>
-        
-
-        
-    )
+    return <RestaurantCard rest={rest}/>  
 }
 
 export async function generateMetadata({params:{id}}:{params:{id:string}}){

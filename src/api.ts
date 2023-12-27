@@ -197,21 +197,15 @@ const api = {
   },
 
   search: async (query: string): Promise<Restaurant[]> => {
-    // Obtenemos los restaurantes
     const restlist=await api.list()
     const results = await api.list().then((restaurants) =>{
-      // Los filtramos por nombre
       return restaurants.filter((restaurant) =>restaurant.name.toLowerCase().includes(query.toLowerCase())
       )}).catch((error)=>{
-        console.log(error)
         const results = restlist
 
-        console.log(restlist)
         return restlist
       })
     
-
-    // Los retornamos
     return results;
   },}
 
