@@ -64,7 +64,7 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
             </form>
             <section className="grid justify-center gap-4">
                 
-                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-8">
                 {restaurants.map((rest)=>{ return <div className="w-80 border border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all"><RestaurantCard rest={rest} key={rest.id}/></div> })}
                 </div>
             </section>
