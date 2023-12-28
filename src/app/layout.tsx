@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 /* import { Inter } from 'next/font/google' */
-import './globals.css'
+import './globals.css' 
 
 /* const inter = Inter({ subsets: ['latin'] }) */
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen">{children}</body>
+      <body className=" p-[5%] sm:p-[15%] min-h-screen  bg-slate-200 dark:bg-slate-900">{children}</body>
     </html>
   )
 }

@@ -52,7 +52,7 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
     }
 
     return (
-        <div className="grid place-items-center p-4 h-9/10 dark:text-orange-200 gap-10">
+        <div className=" grid place-items-center  h-9/10 dark:text-orange-200 gap-10 ">
             <h1 className="text-orange-500 text-5xl m-3 ">Curso de Nexts Js de Goncy</h1>
             <p>Creando un catalogo de restaurantes para conocer los fundamentos de Next Js</p>
             {/* <SearchBox/> */}
@@ -64,7 +64,7 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
             <section className="grid justify-center gap-4">
                 
                 <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10">
-                {restaurants.map((rest)=>{ return <div key={rest.id} className=" border border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all"><RestaurantCard rest={rest} key={rest.id}/></div> })}
+                {restaurants.map((rest)=>{ return <div key={rest.id} className=" border border-gray-800 dark:border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all"><RestaurantCard rest={rest} key={rest.id}/></div> })}
                 </div>
             </section>
     
