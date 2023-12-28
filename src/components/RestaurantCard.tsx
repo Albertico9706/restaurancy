@@ -21,7 +21,7 @@ export default function RestaurantCard({rest}:{rest:Restaurant}){
                 <img className="h-full transition-all " src={rest.image} alt="Imagen del Restaurant" />
             </div>
             <p className="opacity-90">{rest.description}</p>
-            <div className="inline-flex gap-4 place-items-center border-t border-t-blue-50 ">
+            <div className="inline-flex gap-4 place-items-center border-t border-t-black dark:border-t-blue-50 ">
                 <small className="opacity-70">{rest.address}</small>
                 <div>
                 <span>⭐</span>
