@@ -13,7 +13,7 @@ import { title } from "process"
 export default async function RestId({params:{id}}:{params:{id:string}}){
     const rest=await api.fetch(id)
   
-    return <RestaurantCard rest={rest}/>  
+    return <div className="h-screen"><RestaurantCard rest={rest}/></div>  
 }
 
 export async function generateMetadata({params:{id}}:{params:{id:string}}){
