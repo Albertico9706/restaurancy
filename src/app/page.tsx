@@ -39,6 +39,7 @@ import api from "@/api"
 
 import { redirect } from "next/navigation"
 import RestaurantCard from "@/components/RestaurantCard"
+import MainRestaurantCard from "@/components/MainRestaurantCard"
 
 
 export default async function Restaurancy({searchParams}:{searchParams:{q:string}}){
@@ -57,14 +58,14 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
             <p>Creando un catalogo de restaurantes para conocer los fundamentos de Next Js</p>
             {/* <SearchBox/> */}
             
-            <form action={searchAction} className="inline-flex gap-2 mb-4">
-                <input defaultValue={searchParams.q || ''} className="px-2 bg-slate-600 " name="query" />
-                <button type="submit" className="p-2 bg-white/20">Search</button>
+            <form action={searchAction} className="inline-flex gap-2 mb-4  ">
+                <input defaultValue={searchParams.q || ''} className="px-2 dark:bg-slate-600 border-[0.5px] border-slate-300" name="query" />
+                <button type="submit" className="p-2 bg-white/20 border border-slate-400  ">Search</button>
             </form>
             <section className="grid justify-center gap-4">
                 
                 <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10">
-                {restaurants.map((rest)=>{ return <div key={rest.id} className="  border border-gray-800 dark:border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all"><RestaurantCard rest={rest} key={rest.id}/></div> })}
+                {restaurants.map((rest)=>{ return <MainRestaurantCard key={rest.id}><RestaurantCard rest={rest} key={rest.id}/></MainRestaurantCard> })}
                 </div>
             </section>
     
