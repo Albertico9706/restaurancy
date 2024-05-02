@@ -54,8 +54,8 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
 
     return (
         <div className=" grid place-items-center  h-9/10 dark:text-orange-200 gap-10 ">
-            <h1 className="text-orange-500 text-5xl m-3 ">Curso de Nexts Js de Goncy</h1>
-            <p>Creando un catalogo de restaurantes para conocer los fundamentos de Next Js</p>
+            <h1 className="text-orange-500 text-9xl m-3 ">Restaurancy</h1>
+            <p>"La cena de tu sueños a pocos clicks de distancia"</p>
             {/* <SearchBox/> */}
             
             <form action={searchAction} className="inline-flex gap-2 mb-4  ">

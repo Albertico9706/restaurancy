@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 /* import { Inter } from 'next/font/google' */
 import './globals.css' 
+import { DynamicButtonTheme } from '@/components/ButtonTheme'
 
 /* const inter = Inter({ subsets: ['latin'] }) */
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" px-[5%]  min-h-screen  bg-slate-200 dark:bg-slate-900">{children}</body>
+      <body className=" px-[5%]  min-h-screen  bg-slate-200 dark:bg-slate-900">
+        <DynamicButtonTheme />
+        {children}</body>
     </html>
   )
 }
