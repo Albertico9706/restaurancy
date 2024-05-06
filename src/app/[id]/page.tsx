@@ -10,7 +10,7 @@ import { title } from "process"
 
 
 
-export default async function RestId({params:{id}}:{params:{id:string}}){
+export default async function RestDetail({params:{id}}:{params:{id:string}}){
     const rest=await api.fetch(id)
   
     return <div className="h-screen"><RestaurantCard rest={rest}/></div>  

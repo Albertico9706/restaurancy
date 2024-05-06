@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 /* import { Inter } from 'next/font/google' */
 import './globals.css' 
-import { DynamicButtonTheme } from '@/components/ButtonTheme'
+import { ButtonTheme } from '@/components/ButtonTheme'
+import NavBar from '@/components/NavBar'
 
 /* const inter = Inter({ subsets: ['latin'] }) */
 
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" px-[5%]  min-h-screen  bg-slate-200 dark:bg-slate-900">
-        <DynamicButtonTheme />
+        <ButtonTheme />
+        <NavBar/>
         {children}</body>
     </html>
   )

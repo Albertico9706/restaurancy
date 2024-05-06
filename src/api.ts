@@ -1,4 +1,5 @@
 import { error } from "console";
+import fetch_coment from "./fetchComments";
 
 interface Restaurant {
   id: string;
@@ -207,7 +208,11 @@ const api = {
       })
     
     return results;
-  },}
+  },
+
+  fetch_coment,
+
+}
 
 
 export default api;

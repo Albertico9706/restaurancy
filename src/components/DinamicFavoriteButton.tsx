@@ -4,7 +4,7 @@ import { Restaurant } from "@/types"
 import { useState } from "react"
 import dynamic from "../../node_modules/next/dynamic"
 
- function FavoriteButton({rest}: {
+ export function FavoriteButton({rest}: {
     rest: Restaurant
  }){
    const [isFavourite,setIsFavourite] = useState(window.localStorage.getItem('favorites')?.includes(rest.id)||false)
