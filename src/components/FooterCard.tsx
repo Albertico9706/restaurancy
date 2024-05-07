@@ -13,7 +13,7 @@ export default function FooterCard({rest}:{rest:Restaurant}){
                 </div>
                 <span>{rest.ratings}</span>
                 <Suspense fallback={<div className="w-4 h-4 bg-red-600"></div>}><FavoriteButton rest={rest}/></Suspense>
-                <Link href={`./coments${rest.id}`} className="rounded bg-orange-500 p-1">Coments</Link>
+                <Link href={`${rest.id}/coments?rest_id=${rest.id}`} className="rounded bg-orange-500 p-1">Coments</Link>
             </div>
     )
 }

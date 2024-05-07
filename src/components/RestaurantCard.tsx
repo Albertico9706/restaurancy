@@ -19,7 +19,7 @@ export default function RestaurantCard({rest}:{rest:Restaurant}){
                 <img className="h-full transition-all " src={rest.image} alt="Imagen del Restaurant" />
             </div>
             <p className="opacity-90">{rest.description}</p>
-            <FooterCard rest={rest}/>
+            <FooterCard rest={rest}/> 
             
         </article>)
 }

@@ -1,14 +1,12 @@
 
 import { Coment,comments } from "./lib/mockup_comments";
 
-export default async function fetch_coment(rest_id:string):Promise<Coment|null>{
-const result=comments.find(com=>{return com.id===rest_id})
-if(result){
-    return result
-}else{
-    return null
-}
 
+
+export const fetch_c =async (rest_id:string): Promise<Coment[]> =>{
+    const result=comments.filter(com=>{return com.id===rest_id})
     
+        return result
     
-}
+
+} 

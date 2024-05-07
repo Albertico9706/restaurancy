@@ -1,5 +1,6 @@
 import { error } from "console";
 import fetch_coment from "./fetchComments";
+import {fetch_c} from "./fetchComments";
 
 interface Restaurant {
   id: string;
@@ -210,7 +211,7 @@ const api = {
     return results;
   },
 
-  fetch_coment,
+  fetch_coment:fetch_c
 
 }
 
