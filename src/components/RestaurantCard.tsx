@@ -8,7 +8,7 @@ import FooterCard from "./FooterCard"
 
 
 
-export default function RestaurantCard({rest}:{rest:Restaurant}){
+export default async function RestaurantCard({rest}:{rest:Restaurant}){
     
     return (
        <article className="grid gap-8 max-h-screen  place-items-center h-full pt-14 dark:text-orange-200" key={rest.id}>
