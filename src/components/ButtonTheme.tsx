@@ -4,7 +4,9 @@ import dynamic from "next/dynamic"
 
 export function ButtonTheme(){
 const handleclick=()=>{document.documentElement.classList.toggle("dark")
-console.log(document.body.classList)
+window?.localStorage.getItem("class")==="dark"? window?.localStorage.setItem("class","light"):window.localStorage.setItem("class","dark")
+
+console.log(document.documentElement.classList)
 }
 
 return <button 

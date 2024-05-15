@@ -1,24 +1,36 @@
 "use client"
 
 import { Restaurant } from "@/types"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import dynamic from "../../node_modules/next/dynamic"
 
  export function FavoriteButton({rest}: {
     rest: Restaurant
  }){
-   const [isFavourite,setIsFavourite] = useState(window.localStorage.getItem('favorites')?.includes(rest.id)||false)
-   const hasLs=window.localStorage.getItem('favorites')? true:false
+    const [isFavourite, setIsFavourite] = useState(false);
+
+
+    useEffect(() => {
+        if (typeof window!== "undefined") {
+            const favorites = window.localStorage.getItem('favorites');
+            setIsFavourite(favorites?.includes(rest.id) || false);
+        }
+    }, [rest.id]);
+    {/*if(typeof window !== "undefined"){
+        
+    }
+   const [isFavourite,setIsFavourite] = useState(window?.localStorage.getItem('favorites')?.includes(rest.id)||false) */}
+  
    
    const toggleFavorite=()=>{
        const special_id=`*${rest.id}*`
-       let lcs=window.localStorage.getItem('favorites')||""
+       let lcs=window?.localStorage.getItem('favorites')||""
        if(isFavourite){
            setIsFavourite(false)
-           window.localStorage.setItem('favorites',lcs.replace(special_id,""))
+           window?.localStorage.setItem('favorites',lcs.replace(special_id,""))
        }else{
            setIsFavourite(true)
-           window.localStorage.setItem('favorites',special_id.concat(lcs))
+           window?.localStorage.setItem('favorites',special_id.concat(lcs))
        }      
    }
    

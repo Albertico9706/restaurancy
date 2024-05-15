@@ -1,15 +1,20 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation";
 
-export default function ButtonComent(){
-    console.log("mounted")
+interface Props{
+    rest_id:string
+}
+
+
+export default function ButtonComent({rest_id}:Props){
 const [active,setActive]=useState(false)
-const handleClick=(e)=>{
-    console.log("hand")
-    console.log(typeof(e))
+const router= useRouter()
+const handleClick=(e:any)=>{
+    router.push(`/${rest_id}`)
     setActive(!active)
-
+    
 }
 const text=active? "Hide":"Show"  
     return <button className="rounded bg-orange-500 p-1" onClick={handleClick}> {text}</button>

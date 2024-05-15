@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/mockups_restaurants"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/mockups_restaurants", "src/app/ScriptChangeTheme.jsx", "src/context/TasksContext.js"],
   "exclude": ["node_modules"]
 }

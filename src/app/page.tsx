@@ -34,7 +34,7 @@ También nos dijo que te sientas libre de agregar las funcionalidades que consid
 seas todo lo creativo que quieras con el diseño. */
 import { Metadata } from "next"
 //Add the server action to the SearchBox component and separate this on other archive
-import SearchBox from "@/components/SearchBox"
+/*import SearchBox from "@/components/SearchBox"*/ 
 import api from "@/api"
 
 import { redirect } from "next/navigation"
@@ -43,12 +43,12 @@ import MainRestaurantCard from "@/components/MainRestaurantCard"
 
 
 export default async function Restaurancy({searchParams}:{searchParams:{q:string}}){
-    /* const restaurants= await api.list() */
+    
     const restaurants= await api.search(searchParams.q)
     
     async function searchAction(formData: FormData) {
     'use server'
-    console.log("searchAction")
+    /*server action para ejecutar codigo del lado del servidor */
     redirect(`/?q=${formData.get('query')}`);
     }
 
