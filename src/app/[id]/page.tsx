@@ -15,10 +15,10 @@ export default async function RestDetail({params:{id}}:{params:{id:string}}){
     const coments=await api.fetch_coments(id)
   
     return (
-        <div className="h-screen">
+        <div className="">
                 <RestaurantCard rest={rest}/>
                 <div 
-                className='flex flex-col mt-52 gap-20 p-8 bg-gray-500 
+                className='flex flex-col mt-4 p-2 bg-gray-500 
                 rounded-md max-w-screen-md self-center place-self-center m-auto'>
                 <CommentsContainer rest_id={rest.id} />
                 </div>

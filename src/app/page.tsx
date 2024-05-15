@@ -32,11 +32,11 @@ necesario.
 
 También nos dijo que te sientas libre de agregar las funcionalidades que consideres útiles para la aplicación y que 
 seas todo lo creativo que quieras con el diseño. */
-import { Metadata } from "next"
+
 //Add the server action to the SearchBox component and separate this on other archive
 /*import SearchBox from "@/components/SearchBox"*/ 
 import api from "@/api"
-
+import { Metadata } from "next"
 import { redirect } from "next/navigation"
 import RestaurantCard from "@/components/RestaurantCard"
 import MainRestaurantCard from "@/components/MainRestaurantCard"
@@ -54,8 +54,8 @@ export default async function Restaurancy({searchParams}:{searchParams:{q:string
 
     return (
         <div className=" grid place-items-center  h-9/10 dark:text-orange-200 gap-10 ">
-            <h1 className="text-orange-500 text-9xl m-3 mt-12 animate-slide_in_rightt">Restaurancy</h1>
-            <p className="text-2xl animate-pulse  duration-500 ">"<strong>La cena de tu sueños</strong> a pocos clicks de distancia"</p>
+            <h1 className="text-orange-500 text-9xl m-3 mt-40 animate-slide_in_rightt">Restaurancy</h1>
+            <p className="text-2xl animate-pulse  duration-500 "><strong>La cena de tu sueños</strong> a pocos clicks de distancia</p>
             {/* <SearchBox/> */}
             
             <form action={searchAction} className="inline-flex gap-2 mb-4  ">
