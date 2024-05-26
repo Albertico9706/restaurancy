@@ -11,7 +11,7 @@ console.log(document.documentElement.classList)
 
 return <button 
 onClick={handleclick} 
-className="w-5 h-5 absolute top-5 right-5 bg-black dark:bg-white rounded-full z-10" ></button>
+className="  bg-black dark:bg-white rounded-full z-50 w-5 h-5" ></button>
 }
 
 export  const DynamicButtonTheme=dynamic(async()=>ButtonTheme,{ssr:false})

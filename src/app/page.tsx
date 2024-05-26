@@ -37,34 +37,25 @@ seas todo lo creativo que quieras con el diseño. */
 /*import SearchBox from "@/components/SearchBox"*/ 
 import api from "@/api"
 import { Metadata } from "next"
-import { redirect } from "next/navigation"
+
 import RestaurantCard from "@/components/RestaurantCard"
 import MainRestaurantCard from "@/components/MainRestaurantCard"
-
+import Hero from "@/components/Hero"
+import ServerActionForm from "@/components/ServerActionForm"
 
 export default async function Restaurancy({searchParams}:{searchParams:{q:string}}){
     
     const restaurants= await api.search(searchParams.q)
     
-    async function searchAction(formData: FormData) {
-    'use server'
-    /*server action para ejecutar codigo del lado del servidor */
-    redirect(`/?q=${formData.get('query')}`);
-    }
+    
 
     return (
-        <div className=" grid place-items-center  h-9/10 dark:text-orange-200 gap-10 ">
-            <h1 className="text-orange-500 text-9xl m-3 mt-40 animate-slide_in_rightt">Restaurancy</h1>
-            <p className="text-2xl animate-pulse  duration-500 "><strong>La cena de tu sueños</strong> a pocos clicks de distancia</p>
+        <div className=" grid   h-9/10 dark:text-orange-200 gap-10 ">
+            <Hero />
+            <ServerActionForm sParams={searchParams.q} />
             {/* <SearchBox/> */}
-            
-            <form action={searchAction} className="inline-flex gap-2 mb-4  ">
-                <input defaultValue={searchParams.q || ''} className="px-2 dark:bg-slate-600 border-[0.5px] border-slate-300" name="query" />
-                <button type="submit" className="p-2 bg-white/20 border border-slate-400  ">Search</button>
-            </form>
-            <section className="grid justify-center gap-4">
-                
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10">
+            <section className="grid  gap-4 m-12">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(360px,360px))] justify-center gap-8 " >
                 {restaurants.map((rest)=>{ return <MainRestaurantCard key={rest.id}><RestaurantCard rest={rest} key={rest.id}/></MainRestaurantCard> })}
                 </div>
             </section>

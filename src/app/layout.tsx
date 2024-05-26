@@ -25,7 +25,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       }
     </Script >
 
-    <body className=" px-[5%]  min-h-screen  bg-slate-200 dark:bg-slate-900">
+    <body className="bg-slate-200 dark:bg-slate-900">
       <NavBar/>
       {children}
     </body>
