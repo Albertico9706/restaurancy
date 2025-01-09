@@ -2,7 +2,7 @@
 
 import { Restaurant } from "@/types"
 import { useEffect, useState } from "react"
-import dynamic from "../../node_modules/next/dynamic"
+import dynamic from "next/dynamic"
 
  export function FavoriteButton({rest}: {
     rest: Restaurant

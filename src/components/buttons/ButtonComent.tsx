@@ -11,7 +11,7 @@ interface Props{
 export default function ButtonComent({rest_id}:Props){
 const [active,setActive]=useState(false)
 const router= useRouter()
-const handleClick=(e:any)=>{
+const handleClick=()=>{
     router.push(`/${rest_id}`)
     setActive(!active)
     

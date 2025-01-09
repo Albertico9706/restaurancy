@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { ReactNode } from "react";
-import { imageConfigDefault } from "../../node_modules/next/dist/shared/lib/image-config";
+
 
 export default function NavLinks({children, link}:{children:string, link:NavLink}){
     

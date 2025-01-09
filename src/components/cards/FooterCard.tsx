@@ -1,8 +1,7 @@
 import { Suspense } from "react"
-import { FavoriteButton } from "./DinamicFavoriteButton"
+import { FavoriteButton } from "../buttons/DinamicFavoriteButton"
 import { Restaurant } from "@/types"
-import Link from "next/link"
-import ButtonComent from "./ButtonComent"
+
 
 export default function FooterCard({rest}:{rest:Restaurant}){
 

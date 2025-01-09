@@ -1,3 +1,5 @@
+import React from "react"
+
 export default function MainRestaurantCard({children}:{children:React.ReactNode}){
     return(
     <div  className=" border border-gray-800 dark:border-gray-200 border-solid p-10 relative group hover:-translate-y-3 transition-all overflow-hidden">

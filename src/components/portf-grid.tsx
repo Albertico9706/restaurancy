@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ReactElement } from "react"
+import React,{ ReactElement } from "react"
 import Link from "next/link"
 
 export default function PortfolioGrid():React.ReactNode{
@@ -14,7 +14,7 @@ export default function PortfolioGrid():React.ReactNode{
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, aliquid!"/>
         </section>
     )
-};
+}
 
 function CardProyect({imgsc,alt, text,href }:{
     imgsc:string,alt:string, text:string , href:string

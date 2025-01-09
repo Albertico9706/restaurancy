@@ -1,4 +1,5 @@
-import { ButtonTheme } from '@/components/ButtonTheme'
+
+import { DynamicButtonTheme } from '@/components/buttons/ButtonTheme'
 import Link from 'next/link'
 
 
@@ -11,7 +12,7 @@ export default function NavBar(){
             <ul className="flex place-items-center gap-4">
                 {/*Insertar un icono para ver solo los restaurantes favoritos */}
                 <li className="hover:bg-orange-500 rounded-xl p-1 text-orange-500 ">Fav</li>
-                <ButtonTheme />
+                <DynamicButtonTheme />
             </ul>
 
             

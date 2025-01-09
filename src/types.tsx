@@ -7,3 +7,23 @@ export interface Restaurant{
       score: number;
       ratings: number;
 }
+
+export interface Comment{
+  id:string,
+  user_id:string,
+  restaurant_id:string,
+  content:string
+}
+
+export class ControllerRestaurant{
+  private rests:Restaurant[]
+  
+  
+  
+  constructor(rests:Restaurant[]){
+    this.rests=rests
+  }
+}
+
+
+
